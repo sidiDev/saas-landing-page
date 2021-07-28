@@ -1,0 +1,86 @@
+@import "./utilities/_utilities";
+
+.newsletter-container {
+    margin: 2em auto;
+    text-align: center;
+    width: 500px;
+    svg {
+        width: 3em;
+        height: 3em;
+        color: $blue-300;
+        opacity: 0.5;
+    }
+
+    h1 {
+        margin-top: 20px;
+    }
+
+    p {
+        margin-top: 20px;
+        font-size: 15px;
+        line-height: 24px;
+        color: $gray-500;
+    }
+
+    .newsletter-form {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        input {
+            border: solid 1.5px $gray-300;
+            border-radius: 5px;
+            padding: 13px;
+            outline: none;
+            &:focus {
+                border: solid 1.5px $blue-500;
+            }
+        }
+
+        button {
+            @include button(none, #FFF, $blue-500, 16px);
+            padding: 0 1.5em 0 1.5em;
+            border-radius: 5px;
+            margin-left: 10px;
+            &:focus {
+                @include btnShadow(#FFF, $blue-500);
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 640px) {
+
+    %mlr {
+        margin-left: $mlr;
+        margin-right: $mlr;
+    }
+    .newsletter-container {
+
+        margin: 2em auto;
+        width: 100%;
+
+        h1, p {
+            @extend %mlr;
+        }
+
+        .newsletter-form {
+            @extend %mlr;
+            display: block;
+            
+            input {
+                display: block;
+                width: 100%;
+            }
+
+            button {
+                margin-top: 10px;
+                display: block;
+                width: 100%;
+                padding: 13px;
+                margin-left: 0;
+            }
+        }
+    }
+}

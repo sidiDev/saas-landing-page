@@ -1,0 +1,106 @@
+@import './utilities/utilities';
+
+.footer {
+    background: #F3F4F6;
+    margin-top: 3em;
+    padding: $mlr;
+
+    .footer-container {
+
+        .items-groups {
+            display: flex;
+            flex-wrap: wrap;
+
+            ul {
+                width: 250px;
+                margin-top: 20px;
+                span {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: $gray-600;
+                    display: block;
+                    padding-bottom: 15px;
+                }
+
+                li {
+                    margin-top: 15px;
+                    a {
+                        color: $gray-500;
+                        &:hover {
+                            color: $gray-700;
+                        }
+                    }
+                }
+            }
+
+            .footer-brand {
+                width: 200px;
+                align-self: center;
+                text-align: center;
+                margin-top: 1em;
+                svg {
+                    color: $blue-500;
+                    width: 3em;
+                    height: 3em;
+                }
+
+                span {
+                    display: block;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3em;
+        padding-top: 2em;
+        border-top: solid 1.5px $gray-300;
+
+        p {
+            color: $gray-500;
+        }
+
+        .social-media {
+            a {
+                margin-right: 10px;
+                svg {
+                    width: 1.7em;
+                    height: 1.7em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .footer .footer-container
+    .items-groups ul {
+        width: 140px;
+    }
+
+    .footer .footer-container 
+    .items-groups .footer-brand {
+        width: 65px;
+    }
+    
+    .footer .copyright {
+        display: block;
+        text-align: center;
+    }
+
+    .footer .copyright
+    .social-media {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 358px) {
+    .footer .footer-container 
+    .items-groups .footer-brand {
+        width: 100%;
+    }
+}
